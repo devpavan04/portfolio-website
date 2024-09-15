@@ -8,7 +8,7 @@ export default function Home() {
 
       <Socials />
 
-      {/* <Separator className=' bg-light-accent dark:bg-dark-accent' /> */}
+      {/* <Separator className='bg-light-accent dark:bg-dark-accent' /> */}
     </main>
   );
 }

@@ -6,7 +6,11 @@ export const NavBar = () => {
   return (
     <nav className='flex justify-between items-baseline'>
       <Link href='/'>
-        <div className={playwriteCuba.className + ' text-4xl font-bold text-light-accent dark:text-dark-accent'}>
+        <div
+          className={
+            playwriteCuba.className + ' text-4xl font-bold text-light-accent dark:text-dark-accent translate-x-3'
+          }
+        >
           ps
         </div>
       </Link>

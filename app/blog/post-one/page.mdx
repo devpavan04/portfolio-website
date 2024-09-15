@@ -1,0 +1,83 @@
+import { Separator } from '@/components/ui/separator';
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'Post 1',
+  publishDate: '2024-01-01T00:00:00Z',
+};
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>
+
+[This is a link](https://www.google.com)
+
+> This is a profound and thought-provoking quote that spans multiple lines. It delves into the depths of human experience, challenging our preconceptions [This is a link](https://www.google.com) and inspiring us to see the world from a new perspective. The wisdom contained within these words resonates across time and culture, reminding us of the universal truths that bind us all together in our shared journey through life.
+
+**This is bold text**
+
+_This is italicized text_
+
+~~This is strikethrough text~~
+
+Here's a horizontal rule:
+
+<Separator className='bg-light-accent dark:bg-dark-accent' />
+
+<div className='flex flex-col gap-2'>
+  <div>
+   `This is a string{:lang}`
+  </div>
+  <div>
+`const sayName = () => hello{:js}`
+  </div>
+  <div>
+`sayHello(){:js}`
+  </div>
+    <div>
+`important{:js}`
+  </div>
+</div>
+
+```tsx showLineNumbers title="pages/blog/[slug].tsx" {1, 5-11}
+import { allPosts } from 'contentlayer/generated';
+
+export const getStaticPaths = () => {
+  return {
+    paths: allPosts.map((post) => ({
+      params: {
+        slug: post._raw.sourceFileName
+          // hello-world.mdx => hello-world
+          .replace(/\.mdx$/, ''),
+      },
+    })),
+    fallback: false,
+  };
+};
+
+export const getStaticProps = () => {};
+
+export default function SinglePostPage() {}
+```
+
+# Post 2
+
+[Post 2](/blog/post-two)
+
+[Posts](/blog/)
