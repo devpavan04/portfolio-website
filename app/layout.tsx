@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { hubotSans } from '@/lib/fonts';
+import { monaSans } from '@/lib/fonts';
 import { Providers } from '@/app/providers';
 import { NavBar } from '@/components/NavBar';
 import clsx from 'clsx';
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const className = clsx(
-    hubotSans.className,
+    monaSans.className,
     'h-screen',
     'max-w-xl mx-auto',
     'py-2 px-6',

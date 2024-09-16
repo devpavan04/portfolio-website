@@ -1,6 +1,7 @@
 import { getPosts } from '@/app/(routes)/blog/data';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
+import { hubotSans } from '@/lib/fonts';
 
 export default async function Blog() {
   const posts = await getPosts();
@@ -14,7 +15,9 @@ export default async function Blog() {
           <Link href={`/blog/${slug}`}>
             <div className='flex flex-col gap-1'>
               <p className='text-[14px]'>{publishDate}</p>
-              <h2 className='text-light-accent dark:text-dark-accent text-[24px] font-medium hover:underline'>
+              <h2
+                className={`${hubotSans.className} + text-light-accent dark:text-dark-accent text-[24px] font-medium hover:underline`}
+              >
                 {title}
               </h2>
               <p className='text-[16px]'>{description}</p>

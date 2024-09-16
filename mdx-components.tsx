@@ -1,12 +1,13 @@
 import type { MDXComponents } from 'mdx/types';
 import NextLink from 'next/link';
+import { hubotSans } from '@/lib/fonts';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...components,
     h1: ({ id, children }) => (
       <h1
-        className='text-light-accent dark:text-dark-accent text-[28px] md:text-[34px] text-center mt-2 mb-6 font-medium'
+        className={`${hubotSans.className} + text-light-accent dark:text-dark-accent text-[28px] md:text-[34px] text-center mt-2 mb-6 font-medium`}
         id={id}
       >
         {children}
@@ -14,7 +15,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     h2: ({ id, children }) => (
       <h2
-        className='group text-light-accent dark:text-dark-accent font-medium text-[24px] md:text-[30px] my-6 relative pl-[1em] -ml-[1em] no-underline'
+        className={`${hubotSans.className} + group text-light-accent dark:text-dark-accent font-medium text-[24px] md:text-[30px] my-6 relative pl-[1em] -ml-[1em] no-underline`}
         id={id}
       >
         <span className='absolute -ml-[1em] text-light-accent dark:text-dark-accent opacity-0 group-hover:opacity-100 transition-opacity'>
@@ -24,7 +25,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h2>
     ),
     h3: ({ id, children }) => (
-      <h3 className='text-light-accent dark:text-dark-accent font-medium text-[20px] md:text-[26px] my-6' id={id}>
+      <h3
+        className={`${hubotSans.className} + text-light-accent dark:text-dark-accent font-medium text-[20px] md:text-[26px] my-6`}
+        id={id}
+      >
         <span className='absolute -ml-[1em] text-light-accent dark:text-dark-accent opacity-0 group-hover:opacity-100 transition-opacity'>
           #
         </span>
@@ -32,7 +36,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h3>
     ),
     h4: ({ id, children }) => (
-      <h4 className='text-light-accent dark:text-dark-accent font-medium text-[16px] md:text-[20px] my-6' id={id}>
+      <h4
+        className={`${hubotSans.className} + text-light-accent dark:text-dark-accent font-medium text-[16px] md:text-[20px] my-6`}
+        id={id}
+      >
         <span className='absolute -ml-[1em] text-light-accent dark:text-dark-accent opacity-0 group-hover:opacity-100 transition-opacity'>
           #
         </span>
