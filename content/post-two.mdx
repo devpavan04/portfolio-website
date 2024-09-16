@@ -1,19 +1,39 @@
-import { Separator } from '@/components/ui/separator';
-import { PostDateTime } from '@/components/PostDateTime';
-import Link from 'next/link';
-
 export const metadata = {
-  title: 'Post 2',
-  publishDate: '2024-02-01T00:00:00Z',
+  title: 'Nullish Coalescing Operator in JavaScript and TypeScript',
+  description: 'This is a post about the nullish coalescing operator in JavaScript and TypeScript',
+  publishDate: 'Apr 10, 2024',
+  slug: 'post-two',
 };
 
-<PostDateTime date={metadata.publishDate} />
+import { Separator } from '@/components/ui/separator';
+import Link from 'next/link';
 
-# Nullish Coalescing Operator in JavaScript and TypeScript
+# Nullish Coalescing Operator in JavaScript and TypeScript ✨
 
 Lorem ipsum odor amet, consectetuer adipiscing elit. Curae elementum ex praesent; consequat blandit maecenas! Lacinia cursus sit curae praesent; commodo amet elit. At at dolor; taciti malesuada scelerisque nostra montes tincidunt. Netus dui eget rhoncus vivamus tempor sodales euismod. Aenean eleifend ac tempor quisque natoque ad nunc molestie egestas.
 
-Vestibulum `pharetra` habitant dapibus imperdiet quam primis. Aprimis eros erat felis lacinia venenatis maximus. Fames imperdiet arcu efficitur vivamus; nibh quis sit ridiculus. Ex dui mi [pharetra](https://www.google.com) quam phasellus senectus! Nunc venenatis facilisi justo conubia taciti blandit tellus integer. Nisl quisque orci consequat risus feugiat. Porta nisi eros pharetra consectetur urna eget parturient vulputate leo.
+- Nullish Coalescing Operator [pharetra](https://www.google.com)
+- TypeScript
+- JavaScript
+
+1. Nullish Coalescing Operator
+2. TypeScript
+3. JavaScript
+
+```css title="globals.css" showLineNumbers {4}
+.code-title {
+  font-family: var(--font-geist-mono);
+  font-size: 0.8rem;
+  padding: 0.6rem 0.8rem;
+  background-color: #282a36;
+  color: rgba(255, 255, 255, 0.65);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+```
+
+Vestibulum `pharetra{:lang}` habitant dapibus imperdiet quam primis. Aprimis eros erat felis lacinia venenatis maximus. Fames imperdiet arcu efficitur vivamus; nibh quis sit ridiculus. Ex dui mi [pharetra](https://www.google.com) quam phasellus senectus! Nunc venenatis facilisi justo conubia taciti blandit tellus integer. Nisl quisque orci consequat risus feugiat. Porta nisi eros pharetra consectetur urna eget parturient vulputate leo.
 
 ```tsx showLineNumbers title="pages/blog/[slug].tsx" {5-11, 16}
 import { allPosts } from 'contentlayer/generated';
@@ -36,7 +56,7 @@ export const getStaticProps = () => {};
 export default function SinglePostPage() {}
 ```
 
-<Separator className='bg-light-accent dark:bg-dark-accent mt-6' />
+<Separator />
 
 ## Tech Stack
 
@@ -68,7 +88,7 @@ Vulputate semper bibendum nec; proin volutpat quis. Class habitant phasellus; mo
 
 Vulputate semper bibendum nec; proin volutpat quis. Class habitant phasellus; molestie est dignissim a consectetur. Massa elit fermentum pulvinar rhoncus dis maecenas nullam amet. Netus consequat quisque cras sodales semper sagittis. Tempus dolor turpis vehicula imperdiet suscipit felis, dolor nascetur. Aliquam per lectus proin hendrerit senectus nisl nascetur? Feugiat placerat penatibus montes eu congue penatibus nec. Class sed inceptos commodo convallis et commodo. Bibendum eget commodo at hendrerit vehicula. Euismod pulvinar vehicula, finibus eleifend cras curae.
 
-<Separator className='bg-light-accent dark:bg-dark-accent' />
+<Separator />
 
 ## Design
 

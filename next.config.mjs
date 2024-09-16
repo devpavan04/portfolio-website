@@ -9,7 +9,7 @@ const nextConfig = {
 
 /** @type {import('rehype-pretty-code').Options} */
 const rehypePrettyCodeOptions = {
-  theme: 'dracula',
+  theme: 'nord',
   onVisitLine(node) {
     if (node.children.length === 0) {
       node.children = [{ type: 'text', value: ' ' }];

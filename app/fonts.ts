@@ -1,4 +1,4 @@
-import { Fjalla_One, Poppins } from 'next/font/google';
+import { Fjalla_One, Poppins, Inter, Open_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
 
 // Title & Headings
@@ -14,6 +14,20 @@ export const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400'],
   variable: '--font-poppins',
+  display: 'swap',
+});
+
+export const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+export const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-openSans',
   display: 'swap',
 });
 

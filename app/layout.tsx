@@ -5,6 +5,7 @@ import { Providers } from '@/app/providers';
 import { NavBar } from '@/components/NavBar';
 import clsx from 'clsx';
 import { Separator } from '@/components/ui/separator';
+import { GeistMono } from 'geist/font/mono';
 
 export const metadata: Metadata = {
   title: 'Pavan Soratur',
@@ -26,12 +27,12 @@ export default function RootLayout({
   );
 
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html lang='en' suppressHydrationWarning className={`${GeistMono.variable}`}>
       <body className={className}>
         <Providers>
-          <div className='flex flex-col gap-10'>
+          <div className='flex flex-col gap-8'>
             <NavBar />
-            <Separator className='bg-light-accent dark:bg-dark-accent' />
+            <Separator />
             {children}
             {/* Footer */}
           </div>

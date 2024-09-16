@@ -1,5 +1,6 @@
 import { Intro } from '@/components/Intro';
 import { Socials } from '@/components/Socials';
+import { Separator } from '@/components/ui/separator';
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
 
       <Socials />
 
-      {/* <Separator className='bg-light-accent dark:bg-dark-accent' /> */}
+      <Separator />
     </main>
   );
 }
