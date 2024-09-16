@@ -1,13 +1,12 @@
 import type { MDXComponents } from 'mdx/types';
 import NextLink from 'next/link';
-import Balancer from 'react-wrap-balancer';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...components,
     h1: ({ children }) => (
-      <h1 className='text-light-accent dark:text-dark-accent text-4xl text-center mt-2 mb-6 font-medium'>
-        <Balancer>{children}</Balancer>
+      <h1 className='text-light-accent dark:text-dark-accent text-[34px] text-center mt-2 mb-6 font-medium'>
+        {children}
       </h1>
     ),
     h2: ({ children }) => (
