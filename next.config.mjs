@@ -1,6 +1,7 @@
 import createMDX from '@next/mdx';
 import rehypeSlug from 'rehype-slug';
 import rehypePrettyCode from 'rehype-pretty-code';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -26,10 +27,22 @@ const rehypePrettyCodeOptions = {
   },
 };
 
+/** @type {import('rehype-autolink-headings').Options} */
+const rehypeAutolinkHeadingsOptions = {
+  behavior: 'wrap',
+  properties: {
+    className: ['no-underline cursor-pointer'],
+  },
+};
+
 const withMDX = createMDX({
   options: {
     remarkPlugins: [],
-    rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions], [rehypeSlug]],
+    rehypePlugins: [
+      [rehypePrettyCode, rehypePrettyCodeOptions],
+      [rehypeSlug],
+      [rehypeAutolinkHeadings, rehypeAutolinkHeadingsOptions],
+    ],
   },
 });
 
