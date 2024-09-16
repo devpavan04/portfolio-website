@@ -12,8 +12,8 @@ export const Latest = async () => {
 
       {posts.length > 0 && (
         <>
-          <div className='flex flex-col gap-2'>
-            <h2 className='text-light-accent dark:text-dark-accent text-[30px] font-medium'>Blog</h2>
+          <div className='flex flex-col gap-2 text-center'>
+            <h2 className='text-light-accent dark:text-dark-accent text-[24px] font-medium'>Blog</h2>
 
             <ol className='flex flex-col gap-2'>
               {posts.map(({ title, slug }) => (
@@ -32,8 +32,8 @@ export const Latest = async () => {
 
       {projects.length > 0 && (
         <>
-          <div className='flex flex-col gap-2'>
-            <h2 className='text-light-accent dark:text-dark-accent text-[30px] font-medium'>Projects</h2>
+          <div className='flex flex-col gap-2 text-center'>
+            <h2 className='text-light-accent dark:text-dark-accent text-[24px] font-medium'>Projects</h2>
 
             <ol className='flex flex-col gap-2'>
               {projects.map(({ title, href }) => (

@@ -2,7 +2,7 @@ import { FaLinkedinIn, FaGithub, FaXTwitter, FaYoutube } from 'react-icons/fa6';
 
 export const Socials = () => {
   return (
-    <div className='flex justify-start items-center gap-4'>
+    <div className='flex justify-center items-center gap-4'>
       <a
         href='https://www.youtube.com/@pavansoratur9475'
         target='_blank'
