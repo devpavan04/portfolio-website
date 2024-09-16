@@ -13,9 +13,9 @@ const config: Config = {
       colors: {
         'light-bg': '#fdfefe',
         'dark-bg': '#191a1a',
-        'light-text': '#25334b',
+        'light-text': '#132a4b',
         'dark-text': '#dddfb5',
-        'light-accent': '#a2262e',
+        'light-accent': '#1d6aa2',
         'dark-accent': '#499e5e',
       },
       borderRadius: {
