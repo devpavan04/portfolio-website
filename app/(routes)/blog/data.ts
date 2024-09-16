@@ -12,6 +12,7 @@ interface Post {
 
 export async function getPosts(): Promise<Post[]> {
   const posts = await readdir(path.join(process.cwd(), 'content'));
+  if (posts.length === 0) return [];
   const postsWithMetadata = await Promise.all(
     posts.map(async (post) => {
       const imported = await import(`@/content/${post}`);

@@ -1,5 +1,4 @@
 import type { MDXComponents } from 'mdx/types';
-import { fjallaOne } from '@/app/fonts';
 import NextLink from 'next/link';
 import Balancer from 'react-wrap-balancer';
 
@@ -7,20 +6,18 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     ...components,
     h1: ({ children }) => (
-      <h1
-        className={`${fjallaOne.className} text-light-accent dark:text-dark-accent text-4xl mt-2 mb-6 leading-normal text-center`}
-      >
+      <h1 className='text-light-accent dark:text-dark-accent text-4xl text-center mt-2 mb-6 font-medium'>
         <Balancer>{children}</Balancer>
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 className={`${fjallaOne.className} text-light-accent dark:text-dark-accent text-3xl my-6`}>{children}</h2>
+      <h2 className='text-light-accent dark:text-dark-accent font-medium text-3xl my-6'>{children}</h2>
     ),
     h3: ({ children }) => (
-      <h3 className={`${fjallaOne.className} text-light-accent dark:text-dark-accent text-2xl my-6`}>{children}</h3>
+      <h3 className='text-light-accent dark:text-dark-accent font-medium text-2xl my-6'>{children}</h3>
     ),
     h4: ({ children }) => (
-      <h4 className={`${fjallaOne.className} text-light-accent dark:text-dark-accent text-xl my-6`}>{children}</h4>
+      <h4 className='text-light-accent dark:text-dark-accent font-medium text-xl my-6'>{children}</h4>
     ),
     ul: ({ children }) => <ul className='!list-disc list-inside my-6'>{children}</ul>,
     ol: ({ children }) => <ol className='list-decimal list-inside my-6'>{children}</ol>,

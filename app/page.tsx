@@ -1,15 +1,15 @@
 import { Intro } from '@/components/Intro';
+import { Latest } from '@/components/Latest';
 import { Socials } from '@/components/Socials';
-import { Separator } from '@/components/ui/separator';
 
 export default function Home() {
   return (
-    <main className='flex flex-col gap-8'>
+    <main className='flex flex-col gap-6'>
       <Intro />
 
       <Socials />
 
-      <Separator />
+      <Latest />
     </main>
   );
 }

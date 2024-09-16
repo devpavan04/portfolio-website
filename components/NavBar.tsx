@@ -1,6 +1,6 @@
 'use client';
 
-import { playwriteCuba } from '@/app/fonts';
+import { playwriteCuba } from '@/lib/fonts';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
@@ -19,15 +19,14 @@ export const NavBar = () => {
   return (
     <nav className='flex justify-between items-baseline'>
       <Link href='/'>
-        <div className={`${playwriteCuba.className} text-4xl font-bold text-light-accent dark:text-dark-accent translate-x-3`}>
+        <div
+          className={`${playwriteCuba.className} text-4xl font-bold text-light-accent dark:text-dark-accent translate-x-3`}
+        >
           ps
         </div>
       </Link>
 
       <div className='flex justify-center items-center gap-4'>
-        <Link href='/about' className={getLinkClassName('/about')}>
-          About
-        </Link>
         <Link href='/projects' className={getLinkClassName('/projects')}>
           Projects
         </Link>

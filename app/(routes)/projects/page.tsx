@@ -1,23 +1,26 @@
 import { projects } from '@/app/(routes)/projects/data';
 import Link from 'next/link';
-import { fjallaOne } from '@/app/fonts';
 import { Separator } from '@/components/ui/separator';
 
 export default function Projects() {
+  if (projects.length === 0) return <div className='text-center'>No projects found :(</div>;
+
   return (
-    <ol className='flex flex-col gap-4'>
+    <>
       {projects.map(({ title, description, href }) => (
-        <>
+        <div key={title} className='flex flex-col gap-4'>
           <Link href={href} target='_blank' rel='noopener noreferrer'>
-            <li key={title} className='flex flex-col gap-1'>
-              <h2 className={`${fjallaOne.className} text-light-accent dark:text-dark-accent text-[24px]`}>{title}</h2>
+            <div className='flex flex-col gap-1'>
+              <h2 className='text-light-accent dark:text-dark-accent text-[24px] font-medium hover:underline'>
+                {title}
+              </h2>
               <p className='text-[16px]'>{description}</p>
-            </li>
+            </div>
           </Link>
 
           <Separator />
-        </>
+        </div>
       ))}
-    </ol>
+    </>
   );
 }

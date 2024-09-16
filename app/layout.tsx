@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { poppins } from '@/app/fonts';
+import { hubotSans } from '@/lib/fonts';
 import { Providers } from '@/app/providers';
 import { NavBar } from '@/components/NavBar';
 import clsx from 'clsx';
@@ -18,9 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const className = clsx(
-    poppins.className,
+    hubotSans.className,
     'h-screen',
-    'max-w-2xl mx-auto',
+    'max-w-xl mx-auto',
     'py-2 px-6',
     'bg-light-bg dark:bg-dark-bg',
     'text-light-text dark:text-dark-text'
